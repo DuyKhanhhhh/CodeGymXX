@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sample Screen:</h2>
+    <input type="text" id="textVlue">
+    <input type="button" value="add" id="btnAdd" onclick="clickAdd();">
+    <input type="button" value="Display" id="btnDisplay" onclick="clickDisplay();">
+    <div id="result"></div>
+</body>
+<script>
+    let x = 0;
+    let arry = Array();
+    function clickAdd() {
+        arry[x] =document.getElementById("textVlue").vlue;
+        alert("Element: " + arry[x] + "Added at index " + x);
+        x++;
+        document.getElementById("textVlue ").vlue = "";
+    }
+    function clickDisplay(){
+        let e = "</hr>";
+        for(let i = 0; i < arry.length; i++ ){
+            e += "Elment " + i + " = " + arry[i] + "</br>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</html>
